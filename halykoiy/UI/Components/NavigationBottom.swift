@@ -69,7 +69,7 @@ private extension NavigationBottom {
         let title = tab[keyPath: title]
         
         VStack(spacing: 2) {
-            Image(asset: tab[keyPath: icon])
+            Image(systemName: tab[keyPath: icon].rawValue)
                 .resizable()
                 .renderingMode(.template)
                 .frame(width: 24, height: 24)

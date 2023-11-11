@@ -2,9 +2,9 @@ import SwiftUI
 
 struct RootTopScreen: View {
     @StateObject
-    private var router = Router(initial: Route.signIn, debug: true)
+    private var router = Router(initial: Route.services, debug: true)
     
-    @StateObject
+    @ObservedObject
     var viewModel: RootTopViewModel
     
     var body: some View {
@@ -15,6 +15,12 @@ struct RootTopScreen: View {
                 
             case .signUp:
                 Text("Hello")
+                
+            case .services:
+                InventoryScreen()
+                
+            case .items(let navTitle):
+                ItemsScreen(navTitle: navTitle)
             }
         }
     }
