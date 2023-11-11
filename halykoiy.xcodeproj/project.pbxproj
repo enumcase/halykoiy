@@ -50,10 +50,6 @@
 		006D800B2AFF835E00B933C3 /* BottomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D80082AFF835E00B933C3 /* BottomTabView.swift */; };
 		006D800C2AFF835E00B933C3 /* RootTopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D80092AFF835E00B933C3 /* RootTopViewModel.swift */; };
 		006D800F2AFF85EC00B933C3 /* DictionaryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D800E2AFF85EC00B933C3 /* DictionaryHelper.swift */; };
-		E4D2A1A32AFF90B900D10753 /* SignInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2A1A22AFF90B900D10753 /* SignInScreen.swift */; };
-		E4D2A1A82AFFB73700D10753 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2A1A72AFFB73700D10753 /* SignInViewModel.swift */; };
-		E4D2A1AA2AFFB88900D10753 /* LargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2A1A92AFFB88900D10753 /* LargeButton.swift */; };
-		E4D2A1AD2AFFD89300D10753 /* ServicesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2A1AC2AFFD89300D10753 /* ServicesScreen.swift */; };
 		006D80122AFFB9C600B933C3 /* InventoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D80112AFFB9C600B933C3 /* InventoryScreen.swift */; };
 		006D80142AFFB9DC00B933C3 /* InventoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D80132AFFB9DC00B933C3 /* InventoryViewModel.swift */; };
 		006D80172AFFBD8000B933C3 /* DashboardCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D80162AFFBD8000B933C3 /* DashboardCard.swift */; };
@@ -112,10 +108,6 @@
 		006D80082AFF835E00B933C3 /* BottomTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomTabView.swift; sourceTree = "<group>"; };
 		006D80092AFF835E00B933C3 /* RootTopViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTopViewModel.swift; sourceTree = "<group>"; };
 		006D800E2AFF85EC00B933C3 /* DictionaryHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryHelper.swift; sourceTree = "<group>"; };
-		E4D2A1A22AFF90B900D10753 /* SignInScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScreen.swift; sourceTree = "<group>"; };
-		E4D2A1A72AFFB73700D10753 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
-		E4D2A1A92AFFB88900D10753 /* LargeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeButton.swift; sourceTree = "<group>"; };
-		E4D2A1AC2AFFD89300D10753 /* ServicesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesScreen.swift; sourceTree = "<group>"; };
 		006D80112AFFB9C600B933C3 /* InventoryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryScreen.swift; sourceTree = "<group>"; };
 		006D80132AFFB9DC00B933C3 /* InventoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryViewModel.swift; sourceTree = "<group>"; };
 		006D80162AFFBD8000B933C3 /* DashboardCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCard.swift; sourceTree = "<group>"; };
@@ -241,7 +233,6 @@
 			isa = PBXGroup;
 			children = (
 				006D7F062AFF806D00B933C3 /* RoundedCorner.swift */,
-				E4D2A1A92AFFB88900D10753 /* LargeButton.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -292,8 +283,6 @@
 		006D7F2A2AFF806D00B933C3 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				E4D2A1AB2AFFD88100D10753 /* Services */,
-				E4D2A1A42AFF9F5500D10753 /* SignIn */,
 				006D80252AFFF5CD00B933C3 /* EditItem */,
 				006D80222AFFF21200B933C3 /* Items */,
 				006D80102AFFB5FE00B933C3 /* Inventory */,
@@ -388,21 +377,6 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		E4D2A1A42AFF9F5500D10753 /* SignIn */ = {
-			isa = PBXGroup;
-			children = (
-				E4D2A1A22AFF90B900D10753 /* SignInScreen.swift */,
-				E4D2A1A72AFFB73700D10753 /* SignInViewModel.swift */,
-			);
-			path = SignIn;
-			sourceTree = "<group>";
-		};
-		E4D2A1AB2AFFD88100D10753 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				E4D2A1AC2AFFD89300D10753 /* ServicesScreen.swift */,
-			);
-			path = Services;
 		006D80102AFFB5FE00B933C3 /* Inventory */ = {
 			isa = PBXGroup;
 			children = (
@@ -538,7 +512,6 @@
 				006D80022AFF806E00B933C3 /* SessionError.swift in Sources */,
 				006D80192AFFBE1600B933C3 /* InventorySection.swift in Sources */,
 				006D7FBC2AFF806E00B933C3 /* ImageAsset.swift in Sources */,
-				E4D2A1AD2AFFD89300D10753 /* ServicesScreen.swift in Sources */,
 				006D7FA82AFF806E00B933C3 /* TextField.swift in Sources */,
 				006D801D2AFFC05300B933C3 /* DashboardSection.swift in Sources */,
 				006D7FA32AFF806E00B933C3 /* RoundedCorner.swift in Sources */,
@@ -551,13 +524,11 @@
 				006D800A2AFF835E00B933C3 /* RootTopScreen.swift in Sources */,
 				006D801F2AFFE0D500B933C3 /* RecentCard.swift in Sources */,
 				006D7FFB2AFF806E00B933C3 /* RouterHost.swift in Sources */,
-				E4D2A1A32AFF90B900D10753 /* SignInScreen.swift in Sources */,
 				006D7FF72AFF806E00B933C3 /* Logger.swift in Sources */,
 				006D800C2AFF835E00B933C3 /* RootTopViewModel.swift in Sources */,
 				006D7FF82AFF806E00B933C3 /* NavigationEnvironmentValues.swift in Sources */,
 				006D7FAD2AFF806E00B933C3 /* Separator.swift in Sources */,
 				006D7FB52AFF806E00B933C3 /* ViewExtensions.swift in Sources */,
-				E4D2A1AA2AFFB88900D10753 /* LargeButton.swift in Sources */,
 				006D7FA72AFF806E00B933C3 /* NavigationBottom.swift in Sources */,
 				006D80032AFF806E00B933C3 /* RequestParameters.swift in Sources */,
 				006D7FA42AFF806E00B933C3 /* CachedAsyncImage.swift in Sources */,
@@ -571,7 +542,6 @@
 				006D7F942AFF806E00B933C3 /* JSONRequest.swift in Sources */,
 				006D7F922AFF806E00B933C3 /* AuthRequest.swift in Sources */,
 				006D7F932AFF806E00B933C3 /* RestaurantsRequest.swift in Sources */,
-				E4D2A1A82AFFB73700D10753 /* SignInViewModel.swift in Sources */,
 				006D800F2AFF85EC00B933C3 /* DictionaryHelper.swift in Sources */,
 				006D7F9A2AFF806E00B933C3 /* AuthResponse.swift in Sources */,
 				006D7FFE2AFF806E00B933C3 /* ViewModel.swift in Sources */,
@@ -715,7 +685,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
@@ -751,7 +721,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
