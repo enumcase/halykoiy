@@ -27,7 +27,7 @@ public struct CachedAsyncImage<Content>: View where Content: View {
     
     public init(urlRequest: URLRequest?, urlCache: URLCache = .shared,  scale: CGFloat = 1) where Content == Image {
         self.init(urlRequest: urlRequest, urlCache: urlCache, scale: scale) { phase in
-            phase.image ?? Image(uiImage: .init())
+            phase.image?.resizable() ?? Image(uiImage: .init()).resizable()
         }
     }
   

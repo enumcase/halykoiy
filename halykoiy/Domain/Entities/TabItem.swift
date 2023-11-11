@@ -23,6 +23,18 @@ public extension TabItem {
     }
 
     var icon: ImageAsset {
-        return .dummy
+        switch self {
+        case .main:
+            return .main
+            
+        case .transactions:
+            return .transactions
+            
+        case .services:
+            return .services
+
+        case .more:
+            return .more
+        }
     }
 }

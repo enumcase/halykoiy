@@ -4,4 +4,6 @@ import Foundation
 enum Route: Equatable {
     case signIn
     case signUp
+    case services
+    case items(navTitle: String)
 }
