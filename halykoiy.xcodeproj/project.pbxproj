@@ -60,6 +60,9 @@
 		006D80242AFFF24100B933C3 /* ItemsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D80232AFFF24100B933C3 /* ItemsScreen.swift */; };
 		006D80272AFFF5D400B933C3 /* EditItemScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D80262AFFF5D400B933C3 /* EditItemScreen.swift */; };
 		006D802C2AFFFD6600B933C3 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 006D802B2AFFFD6600B933C3 /* CodeScanner */; };
+		006D802E2B0003EF00B933C3 /* LargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D802D2B0003EF00B933C3 /* LargeButton.swift */; };
+		006D80312B00040500B933C3 /* ServicesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D80302B00040500B933C3 /* ServicesScreen.swift */; };
+		006D80332B00042000B933C3 /* SignInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D80322B00042000B933C3 /* SignInScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,6 +120,9 @@
 		006D80202AFFE72600B933C3 /* RecentSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSection.swift; sourceTree = "<group>"; };
 		006D80232AFFF24100B933C3 /* ItemsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsScreen.swift; sourceTree = "<group>"; };
 		006D80262AFFF5D400B933C3 /* EditItemScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemScreen.swift; sourceTree = "<group>"; };
+		006D802D2B0003EF00B933C3 /* LargeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeButton.swift; sourceTree = "<group>"; };
+		006D80302B00040500B933C3 /* ServicesScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesScreen.swift; sourceTree = "<group>"; };
+		006D80322B00042000B933C3 /* SignInScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +238,7 @@
 		006D7F052AFF806D00B933C3 /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
+				006D802D2B0003EF00B933C3 /* LargeButton.swift */,
 				006D7F062AFF806D00B933C3 /* RoundedCorner.swift */,
 			);
 			path = Modifiers;
@@ -283,6 +290,7 @@
 		006D7F2A2AFF806D00B933C3 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				006D802F2B0003FD00B933C3 /* Services */,
 				006D80252AFFF5CD00B933C3 /* EditItem */,
 				006D80222AFFF21200B933C3 /* Items */,
 				006D80102AFFB5FE00B933C3 /* Inventory */,
@@ -423,6 +431,15 @@
 			path = EditItem;
 			sourceTree = "<group>";
 		};
+		006D802F2B0003FD00B933C3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				006D80302B00040500B933C3 /* ServicesScreen.swift */,
+				006D80322B00042000B933C3 /* SignInScreen.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -534,6 +551,7 @@
 				006D7FA42AFF806E00B933C3 /* CachedAsyncImage.swift in Sources */,
 				006D7F972AFF806E00B933C3 /* TabItem.swift in Sources */,
 				006D7FBE2AFF806E00B933C3 /* ColorToken.swift in Sources */,
+				006D802E2B0003EF00B933C3 /* LargeButton.swift in Sources */,
 				006D7FA92AFF806E00B933C3 /* Line.swift in Sources */,
 				006D80042AFF806E00B933C3 /* ResultPublisher.swift in Sources */,
 				006D7F982AFF806E00B933C3 /* EmptyResponse.swift in Sources */,
@@ -545,7 +563,9 @@
 				006D800F2AFF85EC00B933C3 /* DictionaryHelper.swift in Sources */,
 				006D7F9A2AFF806E00B933C3 /* AuthResponse.swift in Sources */,
 				006D7FFE2AFF806E00B933C3 /* ViewModel.swift in Sources */,
+				006D80312B00040500B933C3 /* ServicesScreen.swift in Sources */,
 				006D7FB82AFF806E00B933C3 /* ColorExtensions.swift in Sources */,
+				006D80332B00042000B933C3 /* SignInScreen.swift in Sources */,
 				006D7FFC2AFF806E00B933C3 /* NavigationControllerHost.swift in Sources */,
 				006D800B2AFF835E00B933C3 /* BottomTabView.swift in Sources */,
 				006D7FC02AFF806E00B933C3 /* AppDelegate.swift in Sources */,
