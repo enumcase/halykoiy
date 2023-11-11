@@ -28,6 +28,7 @@ struct ServiceScreen: View {
                 let deposit = Image("deposit")
                 let guaranties = Image("guaranties")
                 let maps = Image("maps")
+                let inventory = Image("maps")
                 
                 
                 // Grid for services
@@ -61,26 +62,43 @@ struct ServiceScreen: View {
                                 .resizable()
                                 .cornerRadius(25)
                                 .frame(width: 160, height: 160)
-                            VStack(alignment: .leading){
-                                
-                                Spacer()
-                                    .fixedSize()
-                                
+                            VStack(alignment: .leading, spacing: 6){
                                 Text("Region analysis")
-                                    .font(.custom("Open Sans", size: 16))
-                                    .padding(.top, 1)
-                                
-                                Spacer()
-                                    .fixedSize()
+                                    .foregroundColor(.black)
+                                    .font(.system(size: 16, weight: .semibold, design: .default))
+                                    .padding(.top, 10)
                                 
                                 Text("Become the wolf of the market")
-                                    .font(.custom("Open Sans", size: 14))
-                                    .foregroundColor(.gray)
+                                    .font(.system(size: 14, weight: .regular, design: .default))
+                                    .foregroundColor(.black.opacity(0.6))
+                                    .multilineTextAlignment(.leading)
                             }
                             
                         }
                         .button {
                             showWebView = true
+                        }
+                        
+                        ZStack(alignment: .top){
+                            inventory
+                                .resizable()
+                                .cornerRadius(25)
+                                .frame(width: 160, height: 160)
+                            VStack(alignment: .leading, spacing: 6){
+                                Text("Inventory")
+                                    .foregroundColor(.black)
+                                    .font(.system(size: 16, weight: .semibold, design: .default))
+                                    .padding(.top, 10)
+                                
+                                Text("Check your business at hand")
+                                    .font(.system(size: 14, weight: .regular, design: .default))
+                                    .foregroundColor(.black.opacity(0.6))
+                                    .multilineTextAlignment(.leading)
+                            }
+                            
+                        }
+                        .button {
+                            router.push(.inventory)
                         }
                     }
                     .padding()

@@ -21,6 +21,9 @@ struct RootTopScreen: View {
                 
             case .items(let navTitle):
                 ItemsScreen(navTitle: navTitle)
+                
+            case .inventory:
+                InventoryScreen()
             }
         }
     }

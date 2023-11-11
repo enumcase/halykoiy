@@ -6,4 +6,5 @@ enum Route: Equatable {
     case signUp
     case services
     case items(navTitle: String)
+    case inventory
 }
