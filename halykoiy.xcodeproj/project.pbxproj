@@ -54,7 +54,6 @@
 		E4D2A1A82AFFB73700D10753 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2A1A72AFFB73700D10753 /* SignInViewModel.swift */; };
 		E4D2A1AA2AFFB88900D10753 /* LargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2A1A92AFFB88900D10753 /* LargeButton.swift */; };
 		E4D2A1AD2AFFD89300D10753 /* ServicesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2A1AC2AFFD89300D10753 /* ServicesScreen.swift */; };
-		E4D2A1B32AFFE32F00D10753 /* testscreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2A1B22AFFE32F00D10753 /* testscreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,7 +106,6 @@
 		E4D2A1A72AFFB73700D10753 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		E4D2A1A92AFFB88900D10753 /* LargeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeButton.swift; sourceTree = "<group>"; };
 		E4D2A1AC2AFFD89300D10753 /* ServicesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesScreen.swift; sourceTree = "<group>"; };
-		E4D2A1B22AFFE32F00D10753 /* testscreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testscreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,7 +272,6 @@
 		006D7F2A2AFF806D00B933C3 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				E4D2A1B12AFFE32000D10753 /* test */,
 				E4D2A1AB2AFFD88100D10753 /* Services */,
 				E4D2A1A42AFF9F5500D10753 /* SignIn */,
 				006D80062AFF835E00B933C3 /* RootTop */,
@@ -385,14 +382,6 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		E4D2A1B12AFFE32000D10753 /* test */ = {
-			isa = PBXGroup;
-			children = (
-				E4D2A1B22AFFE32F00D10753 /* testscreen.swift */,
-			);
-			path = test;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -492,7 +481,6 @@
 				006D80032AFF806E00B933C3 /* RequestParameters.swift in Sources */,
 				006D7FA42AFF806E00B933C3 /* CachedAsyncImage.swift in Sources */,
 				006D7F972AFF806E00B933C3 /* TabItem.swift in Sources */,
-				E4D2A1B32AFFE32F00D10753 /* testscreen.swift in Sources */,
 				006D7FBE2AFF806E00B933C3 /* ColorToken.swift in Sources */,
 				006D7FA92AFF806E00B933C3 /* Line.swift in Sources */,
 				006D80042AFF806E00B933C3 /* ResultPublisher.swift in Sources */,
