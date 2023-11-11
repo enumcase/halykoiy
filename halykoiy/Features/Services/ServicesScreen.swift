@@ -2,6 +2,11 @@ import Foundation
 import SwiftUI
 
 struct ServiceScreen: View {
+    @EnvironmentObject
+    private var router: Router<Route>
+    
+    @State var showWebView = false
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -23,15 +28,15 @@ struct ServiceScreen: View {
                 let deposit = Image("deposit")
                 let guaranties = Image("guaranties")
                 let maps = Image("maps")
-    
-
+                
+                
                 // Grid for services
                 ScrollView{
                     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 20) {
                         accept
-                                .resizable()
-                                .cornerRadius(25)
-                                .frame(width: 160, height: 160)
+                            .resizable()
+                            .cornerRadius(25)
+                            .frame(width: 160, height: 160)
                         
                         cards
                             .resizable()
@@ -74,20 +79,25 @@ struct ServiceScreen: View {
                             }
                             
                         }
-    //                    ServiceButton(label: "Accept")
-    //                    ServiceButton(label: "Cards")
-    //                    ServiceButton(label: "Current account")
-    //                    ServiceButton(label: "Deposit")
-    //                    ServiceButton(label: "Guarantees")
-    //                    ServiceButton(label: "New Feature")
+                        .button {
+                            showWebView = true
+                        }
                     }
                     .padding()
-
-
+                    
+                    
                 }
-                                Spacer()
-
-
+                Spacer()
+                
+                
+            }
+            .sheet(isPresented: $showWebView) {
+                NavigationStack {
+                    WebView(url: URL(string: "https://angular-halyk.vercel.app/")!)
+                        .ignoresSafeArea()
+                        .navigationTitle("Region analysis")
+                        .navigationBarTitleDisplayMode(.inline)
+                }
             }
         }
     }
@@ -96,7 +106,7 @@ struct ServiceScreen: View {
 // Reusable button for the service grid
 struct ServiceButton: View {
     var label: String
-
+    
     var body: some View {
         Button(action: {}) {
             Text(label)

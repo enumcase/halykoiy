@@ -17,7 +17,7 @@ struct RootTopScreen: View {
                 Text("Hello")
                 
             case .services:
-                InventoryScreen()
+                ServiceScreen()
                 
             case .items(let navTitle):
                 ItemsScreen(navTitle: navTitle)

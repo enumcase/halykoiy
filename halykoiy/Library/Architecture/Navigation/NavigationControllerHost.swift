@@ -55,6 +55,14 @@ struct NavigationControllerHost<Route: Equatable, Screen: View>: UIViewControlle
             controller.accessibilityViewIsModal = true
             navigation.present(controller, animated: true, completion: completion)
         }
+        
+        router.onPresentWeb = { controller, completion in
+            controller.view.backgroundColor = .clear
+            controller.modalTransitionStyle = .crossDissolve
+            controller.modalPresentationStyle = .fullScreen
+            controller.accessibilityViewIsModal = true
+            navigation.present(controller, animated: true, completion: completion)
+        }
                         
         return navigation
     }

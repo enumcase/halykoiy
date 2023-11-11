@@ -63,6 +63,7 @@
 		006D802E2B0003EF00B933C3 /* LargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D802D2B0003EF00B933C3 /* LargeButton.swift */; };
 		006D80312B00040500B933C3 /* ServicesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D80302B00040500B933C3 /* ServicesScreen.swift */; };
 		006D80332B00042000B933C3 /* SignInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D80322B00042000B933C3 /* SignInScreen.swift */; };
+		006D80352B0009AD00B933C3 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D80342B0009AD00B933C3 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,6 +124,7 @@
 		006D802D2B0003EF00B933C3 /* LargeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeButton.swift; sourceTree = "<group>"; };
 		006D80302B00040500B933C3 /* ServicesScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesScreen.swift; sourceTree = "<group>"; };
 		006D80322B00042000B933C3 /* SignInScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInScreen.swift; sourceTree = "<group>"; };
+		006D80342B0009AD00B933C3 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -436,6 +438,7 @@
 			children = (
 				006D80302B00040500B933C3 /* ServicesScreen.swift */,
 				006D80322B00042000B933C3 /* SignInScreen.swift */,
+				006D80342B0009AD00B933C3 /* WebView.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -567,6 +570,7 @@
 				006D7FB82AFF806E00B933C3 /* ColorExtensions.swift in Sources */,
 				006D80332B00042000B933C3 /* SignInScreen.swift in Sources */,
 				006D7FFC2AFF806E00B933C3 /* NavigationControllerHost.swift in Sources */,
+				006D80352B0009AD00B933C3 /* WebView.swift in Sources */,
 				006D800B2AFF835E00B933C3 /* BottomTabView.swift in Sources */,
 				006D7FC02AFF806E00B933C3 /* AppDelegate.swift in Sources */,
 			);
