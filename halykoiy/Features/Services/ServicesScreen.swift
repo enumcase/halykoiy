@@ -28,7 +28,7 @@ struct ServiceScreen: View {
                 let deposit = Image("deposit")
                 let guaranties = Image("guaranties")
                 let maps = Image("maps")
-                let inventory = Image("maps")
+                let inventory = Image("inventory")
                 
                 
                 // Grid for services

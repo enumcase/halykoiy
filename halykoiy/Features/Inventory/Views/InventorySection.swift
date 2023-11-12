@@ -5,14 +5,21 @@ struct InventorySection<Content: View>: View {
     private var router: Router<Route>
     
     let title: String
+    let environment: Env
     let shouldShowButton: Bool
     @ViewBuilder let content: () -> Content
     
-    init(title: String, shouldShowButton: Bool = false, content: @escaping () -> Content) {
+    init(title: String, environment: Env, shouldShowButton: Bool = false, content: @escaping () -> Content) {
         self.title = title
+        self.environment = environment
         self.shouldShowButton = shouldShowButton
         self.content = content
     }
+    
+    @State var nameValue = ""
+    @State var qrValue = ""
+    @State var priceValue = ""
+    @State var quantityValue = ""
     
     var body: some View {
         VStack(spacing: 8) {
@@ -42,7 +49,7 @@ struct InventorySection<Content: View>: View {
                 .font(.system(size: 14, weight: .medium, design: .default))
         }
         .button {
-            let view = EditItemScreen()
+            let view = EditItemScreen(viewModel: .init(environment: environment), nameValue: $nameValue, qrValue: $qrValue, priceValue: $priceValue, quantityValue: $quantityValue).environmentObject(router)
             router.presentDialog(view)
         }
         .foregroundColor(.white)

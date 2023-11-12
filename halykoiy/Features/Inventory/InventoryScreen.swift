@@ -5,14 +5,18 @@ struct InventoryScreen: View {
     @EnvironmentObject
     private var router: Router<Route>
     
+    @ObservedObject
+    var viewModel: InventoryViewModel
+    
     @State private var isPresentingScanner = false
+    @State private var isPresentingEditItem = false
     @State private var scannedCode: String?
     
     var body: some View {
         NavigationStack {
             ScrollView {
-                InventorySection(title: "Статистика") {
-                    DashboardSection()
+                InventorySection(title: "Статистика", environment: viewModel.environment) {
+                    DashboardSection(inventory: viewModel.state.inventory)
                 }
                 .padding(.horizontal, 16)
                 .padding(.vertical, 8)
@@ -21,7 +25,7 @@ struct InventoryScreen: View {
                     .padding(.horizontal, 16)
                     .padding(.vertical, 8)
                 
-                InventorySection(title: "Недавние", shouldShowButton: true) {
+                InventorySection(title: "Недавние", environment: viewModel.environment, shouldShowButton: true) {
                     RecentSection()
                 }
                 .padding(.horizontal, 16)
@@ -36,12 +40,21 @@ struct InventoryScreen: View {
             )
             .background(Color(.screenBackground))
             .sheet(isPresented: $isPresentingScanner) {
-                CodeScannerView(codeTypes: [.qr]) { response in
+                CodeScannerView(codeTypes: [.qr, .codabar, .code128, .code39, .ean13, .ean8]) { response in
                     if case let .success(result) = response {
-                        scannedCode = result.string
+                        scannedCode = "3232324"
+                        viewModel.qrValue = scannedCode ?? ""
                         isPresentingScanner = false
+                        isPresentingEditItem = true
                     }
                 }
+            }
+            .sheet(isPresented: $isPresentingEditItem) {
+                EditItemScreen(viewModel: .init(environment: viewModel.environment), nameValue: $viewModel.nameValue, qrValue: $viewModel.qrValue, priceValue: $viewModel.priceValue, quantityValue: $viewModel.quantityValue)
+                    .environmentObject(router)
+            }
+            .onAppear {
+                viewModel.send(event: .load)
             }
         }
     }
@@ -88,7 +101,7 @@ struct InventoryScreen: View {
 
 struct InventoryScreen_Previews: PreviewProvider {
     static var previews: some View {
-        InventoryScreen()
+        InventoryScreen(viewModel: .init(environment: Env()))
     }
 }
 

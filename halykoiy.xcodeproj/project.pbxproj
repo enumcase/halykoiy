@@ -9,9 +9,8 @@
 /* Begin PBXBuildFile section */
 		006D7EDD2AFF7E8C00B933C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 006D7EDC2AFF7E8C00B933C3 /* Assets.xcassets */; };
 		006D7EE12AFF7E8C00B933C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 006D7EE02AFF7E8C00B933C3 /* Preview Assets.xcassets */; };
-		006D7F8E2AFF806E00B933C3 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D7EEA2AFF806C00B933C3 /* AuthRepository.swift */; };
-		006D7F922AFF806E00B933C3 /* AuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D7EF02AFF806C00B933C3 /* AuthRequest.swift */; };
-		006D7F932AFF806E00B933C3 /* RestaurantsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D7EF12AFF806C00B933C3 /* RestaurantsRequest.swift */; };
+		006D7F8E2AFF806E00B933C3 /* InventoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D7EEA2AFF806C00B933C3 /* InventoryRepository.swift */; };
+		006D7F922AFF806E00B933C3 /* GetInventoryRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D7EF02AFF806C00B933C3 /* GetInventoryRequest.swift */; };
 		006D7F942AFF806E00B933C3 /* JSONRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D7EF22AFF806C00B933C3 /* JSONRequest.swift */; };
 		006D7F972AFF806E00B933C3 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D7EF72AFF806C00B933C3 /* TabItem.swift */; };
 		006D7F982AFF806E00B933C3 /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D7EF92AFF806C00B933C3 /* EmptyResponse.swift */; };
@@ -64,6 +63,11 @@
 		006D80312B00040500B933C3 /* ServicesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D80302B00040500B933C3 /* ServicesScreen.swift */; };
 		006D80332B00042000B933C3 /* SignInScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D80322B00042000B933C3 /* SignInScreen.swift */; };
 		006D80352B0009AD00B933C3 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D80342B0009AD00B933C3 /* WebView.swift */; };
+		006D80372B00675800B933C3 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D80362B00675800B933C3 /* Inventory.swift */; };
+		006D803A2B007D3200B933C3 /* EditItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D80392B007D3200B933C3 /* EditItemViewModel.swift */; };
+		006D803C2B007D8800B933C3 /* ItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D803B2B007D8800B933C3 /* ItemRepository.swift */; };
+		006D803E2B007D9F00B933C3 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D803D2B007D9F00B933C3 /* Item.swift */; };
+		006D80402B007DD400B933C3 /* AddItemRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006D803F2B007DD400B933C3 /* AddItemRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,9 +75,8 @@
 		006D7EDC2AFF7E8C00B933C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		006D7EDE2AFF7E8C00B933C3 /* halykoiy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = halykoiy.entitlements; sourceTree = "<group>"; };
 		006D7EE02AFF7E8C00B933C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		006D7EEA2AFF806C00B933C3 /* AuthRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
-		006D7EF02AFF806C00B933C3 /* AuthRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRequest.swift; sourceTree = "<group>"; };
-		006D7EF12AFF806C00B933C3 /* RestaurantsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantsRequest.swift; sourceTree = "<group>"; };
+		006D7EEA2AFF806C00B933C3 /* InventoryRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryRepository.swift; sourceTree = "<group>"; };
+		006D7EF02AFF806C00B933C3 /* GetInventoryRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetInventoryRequest.swift; sourceTree = "<group>"; };
 		006D7EF22AFF806C00B933C3 /* JSONRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONRequest.swift; sourceTree = "<group>"; };
 		006D7EF72AFF806C00B933C3 /* TabItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
 		006D7EF92AFF806C00B933C3 /* EmptyResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
@@ -125,6 +128,12 @@
 		006D80302B00040500B933C3 /* ServicesScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesScreen.swift; sourceTree = "<group>"; };
 		006D80322B00042000B933C3 /* SignInScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInScreen.swift; sourceTree = "<group>"; };
 		006D80342B0009AD00B933C3 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		006D80362B00675800B933C3 /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
+		006D80382B006A6900B933C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		006D80392B007D3200B933C3 /* EditItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemViewModel.swift; sourceTree = "<group>"; };
+		006D803B2B007D8800B933C3 /* ItemRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemRepository.swift; sourceTree = "<group>"; };
+		006D803D2B007D9F00B933C3 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		006D803F2B007DD400B933C3 /* AddItemRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +167,7 @@
 		006D7ED72AFF7E8B00B933C3 /* halykoiy */ = {
 			isa = PBXGroup;
 			children = (
+				006D80382B006A6900B933C3 /* Info.plist */,
 				006D7F262AFF806D00B933C3 /* Application */,
 				006D7F032AFF806D00B933C3 /* UI */,
 				006D7EE72AFF806C00B933C3 /* Domain */,
@@ -192,7 +202,8 @@
 		006D7EE82AFF806C00B933C3 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				006D7EEA2AFF806C00B933C3 /* AuthRepository.swift */,
+				006D7EEA2AFF806C00B933C3 /* InventoryRepository.swift */,
+				006D803B2B007D8800B933C3 /* ItemRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -200,9 +211,9 @@
 		006D7EEF2AFF806C00B933C3 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
-				006D7EF02AFF806C00B933C3 /* AuthRequest.swift */,
-				006D7EF12AFF806C00B933C3 /* RestaurantsRequest.swift */,
+				006D7EF02AFF806C00B933C3 /* GetInventoryRequest.swift */,
 				006D7EF22AFF806C00B933C3 /* JSONRequest.swift */,
+				006D803F2B007DD400B933C3 /* AddItemRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -212,6 +223,8 @@
 			children = (
 				006D7EF72AFF806C00B933C3 /* TabItem.swift */,
 				006D7EF82AFF806C00B933C3 /* Responses */,
+				006D80362B00675800B933C3 /* Inventory.swift */,
+				006D803D2B007D9F00B933C3 /* Item.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -429,6 +442,7 @@
 			isa = PBXGroup;
 			children = (
 				006D80262AFFF5D400B933C3 /* EditItemScreen.swift */,
+				006D80392B007D3200B933C3 /* EditItemViewModel.swift */,
 			);
 			path = EditItem;
 			sourceTree = "<group>";
@@ -522,8 +536,10 @@
 				006D80172AFFBD8000B933C3 /* DashboardCard.swift in Sources */,
 				006D80142AFFB9DC00B933C3 /* InventoryViewModel.swift in Sources */,
 				006D80272AFFF5D400B933C3 /* EditItemScreen.swift in Sources */,
+				006D803A2B007D3200B933C3 /* EditItemViewModel.swift in Sources */,
 				006D7FBF2AFF806E00B933C3 /* Env.swift in Sources */,
 				006D7FFF2AFF806E00B933C3 /* SessionCoordinator.swift in Sources */,
+				006D803C2B007D8800B933C3 /* ItemRepository.swift in Sources */,
 				006D80212AFFE72600B933C3 /* RecentSection.swift in Sources */,
 				006D80122AFFB9C600B933C3 /* InventoryScreen.swift in Sources */,
 				006D7FA52AFF806E00B933C3 /* Spinner.swift in Sources */,
@@ -539,7 +555,7 @@
 				006D7FC12AFF806E00B933C3 /* SceneDelegate.swift in Sources */,
 				006D7FFA2AFF806E00B933C3 /* Router.swift in Sources */,
 				006D7FF92AFF806E00B933C3 /* NavigationStyle.swift in Sources */,
-				006D7F8E2AFF806E00B933C3 /* AuthRepository.swift in Sources */,
+				006D7F8E2AFF806E00B933C3 /* InventoryRepository.swift in Sources */,
 				006D7FB92AFF806E00B933C3 /* UIColorExtensions.swift in Sources */,
 				006D800A2AFF835E00B933C3 /* RootTopScreen.swift in Sources */,
 				006D801F2AFFE0D500B933C3 /* RecentCard.swift in Sources */,
@@ -549,6 +565,7 @@
 				006D7FF82AFF806E00B933C3 /* NavigationEnvironmentValues.swift in Sources */,
 				006D7FAD2AFF806E00B933C3 /* Separator.swift in Sources */,
 				006D7FB52AFF806E00B933C3 /* ViewExtensions.swift in Sources */,
+				006D80372B00675800B933C3 /* Inventory.swift in Sources */,
 				006D7FA72AFF806E00B933C3 /* NavigationBottom.swift in Sources */,
 				006D80032AFF806E00B933C3 /* RequestParameters.swift in Sources */,
 				006D7FA42AFF806E00B933C3 /* CachedAsyncImage.swift in Sources */,
@@ -561,17 +578,18 @@
 				006D7FB72AFF806E00B933C3 /* ImageExtensions.swift in Sources */,
 				006D80242AFFF24100B933C3 /* ItemsScreen.swift in Sources */,
 				006D7F942AFF806E00B933C3 /* JSONRequest.swift in Sources */,
-				006D7F922AFF806E00B933C3 /* AuthRequest.swift in Sources */,
-				006D7F932AFF806E00B933C3 /* RestaurantsRequest.swift in Sources */,
+				006D7F922AFF806E00B933C3 /* GetInventoryRequest.swift in Sources */,
 				006D800F2AFF85EC00B933C3 /* DictionaryHelper.swift in Sources */,
 				006D7F9A2AFF806E00B933C3 /* AuthResponse.swift in Sources */,
 				006D7FFE2AFF806E00B933C3 /* ViewModel.swift in Sources */,
 				006D80312B00040500B933C3 /* ServicesScreen.swift in Sources */,
 				006D7FB82AFF806E00B933C3 /* ColorExtensions.swift in Sources */,
 				006D80332B00042000B933C3 /* SignInScreen.swift in Sources */,
+				006D803E2B007D9F00B933C3 /* Item.swift in Sources */,
 				006D7FFC2AFF806E00B933C3 /* NavigationControllerHost.swift in Sources */,
 				006D80352B0009AD00B933C3 /* WebView.swift in Sources */,
 				006D800B2AFF835E00B933C3 /* BottomTabView.swift in Sources */,
+				006D80402B007DD400B933C3 /* AddItemRequest.swift in Sources */,
 				006D7FC02AFF806E00B933C3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -699,6 +717,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"halykoiy/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = halykoiy/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -735,6 +754,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"halykoiy/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = halykoiy/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;

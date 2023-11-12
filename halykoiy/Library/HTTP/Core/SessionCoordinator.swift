@@ -120,6 +120,7 @@ private extension SessionCoordinator {
     ) -> URLRequest {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue
+        urlRequest.setValue("Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI3NzU0MzUxOTYwIiwiaWF0IjoxNjk5NzUxNDQ4LCJleHAiOjE3MDIzNDM0NDh9.eE0naIS5RqojVw8s4PSGuFR9k9_i4h-fvzMga7eBuD0", forHTTPHeaderField: "Authorization")
         if method != .get {
             do {
                 urlRequest.httpBody = try JSONSerialization.data(withJSONObject: parameters ?? [], options: [.prettyPrinted])
@@ -155,6 +156,6 @@ private extension SessionCoordinator {
     }
     
     private enum Constants {
-        static let baseURL = URL(string: "http://1385980-ci11141.tw1.ru:8080")!
+        static let baseURL = URL(string: "http://halyk-oiy-production.up.railway.app/api")!
     }
 }

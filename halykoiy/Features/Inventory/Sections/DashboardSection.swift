@@ -4,20 +4,22 @@ struct DashboardSection: View {
     @EnvironmentObject
     private var router: Router<Route>
     
+    var inventory: Inventory?
+    
     var body: some View {
         VStack(spacing: 8) {
             HStack(spacing: 8) {
                 DashboardCard(
                     icon: "dollarsign.circle",
                     title: "Сумма инвентаря",
-                    description: "1,212,121"
+                    description: inventory == nil ? "-" : "\(inventory!.price)"
                 )
                 .foregroundColor(Color(.accent))
                 
                 DashboardCard(
                     icon: "tray.full.fill",
                     title: "Всего кол-во",
-                    description: "12"
+                    description: inventory == nil ? "-" : "\(inventory!.total)"
                 )
                 .foregroundColor(.purple)
                 .button {
@@ -29,7 +31,7 @@ struct DashboardSection: View {
                 DashboardCard(
                     icon: "exclamationmark.circle.fill",
                     title: "Малое кол-во",
-                    description: "2"
+                    description: inventory == nil ? "-" : "\(inventory!.lowStock)"
                 )
                 .foregroundColor(.yellow)
                 .button {
@@ -39,7 +41,7 @@ struct DashboardSection: View {
                 DashboardCard(
                     icon: "exclamationmark.circle.fill",
                     title: "Закончилось",
-                    description: "3"
+                    description: inventory == nil ? "-" : "\(inventory!.outOfStock)"
                 )
                 .foregroundColor(.red)
                 .button {

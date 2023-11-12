@@ -3,7 +3,7 @@ import Foundation
 
 final class InventoryViewModel: ObservableObject, ViewModel {
     struct State {
-        
+        var inventory: Inventory? = nil
     }
     
     enum Event {
@@ -13,8 +13,13 @@ final class InventoryViewModel: ObservableObject, ViewModel {
     @Published
     var state = State()
     
+    @Published var nameValue = ""
+    @Published var qrValue = ""
+    @Published var priceValue = ""
+    @Published var quantityValue = ""
+    
     private var cancellables = Set<AnyCancellable>()
-    private let environment: Env
+    let environment: Env
     
     init(environment: Env) {
         self.environment = environment
@@ -23,7 +28,21 @@ final class InventoryViewModel: ObservableObject, ViewModel {
     func send(event: Event) {
         switch event {
         case .load:
-            break
+            loadInventory()
         }
+    }
+    
+    func loadInventory() {
+        environment.inventoryRepository.getInventory()
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] result in
+                switch result {
+                case .success(let inventory):
+                    self?.state.inventory = inventory
+                case .failure(let error):
+                    print("🐹 \(error)")
+                }
+            }
+            .store(in: &cancellables)
     }
 }

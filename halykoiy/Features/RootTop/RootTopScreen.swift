@@ -23,7 +23,9 @@ struct RootTopScreen: View {
                 ItemsScreen(navTitle: navTitle)
                 
             case .inventory:
-                InventoryScreen()
+                InventoryScreen(
+                    viewModel: .init(environment: viewModel.environment)
+                )
             }
         }
     }

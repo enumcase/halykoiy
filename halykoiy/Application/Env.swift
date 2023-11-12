@@ -1,5 +1,6 @@
 import Foundation
 
 final class Env {
-    let authRepository = AuthRepository()
+    let inventoryRepository = InventoryRepository()
+    let itemRepository = ItemRepository()
 }

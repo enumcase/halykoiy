@@ -4,7 +4,6 @@ import SwiftUI
 class RootTopViewModel: ObservableObject {
     struct State {
         var tab = TabItem.services
-        var isSignedIn: Bool
         
         public func binding<T>(
             _ keyPath: KeyPath<State, T>,
@@ -29,7 +28,7 @@ class RootTopViewModel: ObservableObject {
     
     init(environment: Env) {
         self.environment = environment
-        self.state = State(isSignedIn: environment.authRepository.isSignedIn)
+        self.state = State()
     }
     
     func switchTab(_ tab: TabItem) {
