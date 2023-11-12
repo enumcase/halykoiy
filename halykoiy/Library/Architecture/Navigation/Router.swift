@@ -8,6 +8,7 @@ public class Router<Route: Equatable>: ObservableObject {
     var onPopLast: ((Int, Bool) -> Void)?
     var onPresent: ((UIViewController, (() -> Void)?) -> Void)?
     var onPresentWeb: ((UIViewController, (() -> Void)?) -> Void)?
+    var onDismiss: (() -> Void)?
 
     public init(initial: Route? = nil, debug: Bool = false) {
         logger = debug ? DebugLog() : EmptyLog()
@@ -72,5 +73,9 @@ public class Router<Route: Equatable>: ObservableObject {
     public func presentWeb<Content: View>(_ content: Content, completion: (() -> Void)? = nil) {
         let next = UIHostingController(rootView: content)
         onPresentWeb?(next, completion)
+    }
+    
+    public func dismiss() {
+        onDismiss?()
     }
 }

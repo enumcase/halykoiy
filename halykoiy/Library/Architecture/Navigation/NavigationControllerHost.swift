@@ -63,6 +63,10 @@ struct NavigationControllerHost<Route: Equatable, Screen: View>: UIViewControlle
             controller.accessibilityViewIsModal = true
             navigation.present(controller, animated: true, completion: completion)
         }
+        
+        router.onDismiss = {
+            navigation.dismiss(animated: true)
+        }
                         
         return navigation
     }

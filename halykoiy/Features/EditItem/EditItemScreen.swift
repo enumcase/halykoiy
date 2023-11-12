@@ -46,7 +46,7 @@ struct EditItemScreen: View {
     var addButton: some View {
         Button {
             viewModel.send(event: .addItem) {
-                router.pop()
+                router.dismiss()
             }
         } label: {
             Text("Добавить")
