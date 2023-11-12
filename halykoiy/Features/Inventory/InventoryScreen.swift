@@ -25,7 +25,7 @@ struct InventoryScreen: View {
                     .padding(.vertical, 8)
                 
                 InventorySection(title: "Недавние", environment: viewModel.environment, shouldShowButton: true) {
-                    RecentSection()
+                    RecentSection(viewModel: viewModel)
                 }
                 .padding(.horizontal, 16)
                 .padding(.vertical, 8)

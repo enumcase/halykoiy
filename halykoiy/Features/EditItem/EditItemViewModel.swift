@@ -33,7 +33,7 @@ final class EditItemViewModel: ObservableObject {
     func send(event: Event, completion: @escaping () -> Void) {
         switch event {
         case .addItem:
-            let item = Item(uniqueNumber: Int(state.qrValue) ?? 0, name: state.nameValue, price: Int(state.priceValue) ?? 0, imageUrl: "https://www.google.com/imgres?imgurl=https%3A%2F%2Fpaxchristiusa.org%2Fwp-content%2Fuploads%2F2016%2F01%2Fbanana-31.jpg&tbnid=53q43_1-NuCVOM&vet=12ahUKEwjqoK_Xw72CAxUCPXAKHZAXCiQQMygDegQIARBQ..i&imgrefurl=https%3A%2F%2Fpaxchristiusa.org%2F2016%2F01%2F16%2Ftake-action-embrace-the-banana-challenge%2F&docid=aZIlTHxBE-AifM&w=1500&h=1237&q=banana%20square&ved=2ahUKEwjqoK_Xw72CAxUCPXAKHZAXCiQQMygDegQIARBQ")
+            let item = Item(id: Int(state.qrValue) ?? 0, name: state.nameValue, price: Int(state.priceValue) ?? 0, imageUrl: "https://universalele.websites.co.in/obaju-turquoise/img/product-placeholder.png", count: 0)
             addItem(item: item, completion: completion)
         }
     }

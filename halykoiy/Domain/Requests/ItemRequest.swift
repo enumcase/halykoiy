@@ -1,6 +1,6 @@
 import Foundation
 
-enum AddItemRequest: JSONRequest {
+enum ItemRequest: JSONRequest {
     struct Parameter: Codable {
         let uniqueNumber: Int
         let name: String
@@ -9,10 +9,11 @@ enum AddItemRequest: JSONRequest {
     }
     
     case addItem
+    case getItems
     
     var path: String {
         switch self {
-        case .addItem:
+        case .addItem, .getItems:
             return "/items"
         }
     }

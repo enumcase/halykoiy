@@ -1,14 +1,16 @@
 import SwiftUI
 
 struct RecentCard: View {
-    let image: String
-    let title: String
-    let count: Int
+    @EnvironmentObject
+    private var router: Router<Route>
+    
+    let item: Item
+    let environment: Env
     
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack {
-                CachedAsyncImage(url: URL(string: image)!, urlCache: .shared)
+                CachedAsyncImage(url: URL(string: item.imageUrl ?? "") ?? URL(string:  "https://universalele.websites.co.in/obaju-turquoise/img/product-placeholder.png")!, urlCache: .shared)
                     .frame(width: 60, height: 60)
                     .cornerRadius(8)
                 
@@ -29,11 +31,11 @@ struct RecentCard: View {
     
     var titleAndCountView: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text(title)
+            Text(item.name)
                 .foregroundColor(.black)
                 .font(.system(size: 16, weight: .medium, design: .default))
             
-            Text("\(count) в инвентаре")
+            Text("Цена: \(item.price)")
                 .foregroundColor(.gray)
                 .font(.system(size: 16, weight: .medium, design: .default))
         }
@@ -41,7 +43,7 @@ struct RecentCard: View {
     
     var iconAndButtonView: some View {
         VStack(alignment: .leading, spacing: 16) {
-            if count >= 0 && count <= 100 {
+            if item.price >= 0 && item.price <= 100 {
                 Image(systemName: "exclamationmark.circle.fill")
                     .resizable()
                     .frame(width: 20, height: 20)
@@ -57,7 +59,8 @@ struct RecentCard: View {
                 }
                 
                 Button {
-                    
+                    let view = EditItemScreen(viewModel: .init(environment: environment, nameValue: item.name, qrValue: String(item.id), priceValue: String(item.price), quantityValue: "0")).environmentObject(router)
+                    router.presentDialog(view)
                 } label: {
                     Label("Редактировать", systemImage: "square.and.pencil")
                 }
@@ -70,18 +73,14 @@ struct RecentCard: View {
     }
     
     var iconColor: Color? {
+        guard let count = item.count else {
+            return nil
+        }
         switch count {
         case 0: return .red
         case 1...20: return .yellow
         case 21...100: return Color(.accent)
         default: return nil
         }
-    }
-}
-
-
-struct RecentCard_Previews: PreviewProvider {
-    static var previews: some View {
-        RecentCard(image: "https://lh3.googleusercontent.com/x_RRi8ncKIYeB1Jff4Wp6TR4b-cyQpPWbhkci730X4jWtTAzebQ4S7dP0J4AGt813XA_ifQWPwOL59oMlKG7qijXHRfuDT7zoftfHL8JvQGukmk_=w380-nu-rj-l70-e365", title: "ABC", count: 12)
     }
 }
