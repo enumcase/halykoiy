@@ -7,18 +7,6 @@ struct EditItemScreen: View {
     @ObservedObject
     var viewModel: EditItemViewModel
     
-    @Binding
-    var nameValue: String
-    
-    @Binding
-    var qrValue: String
-
-    @Binding
-    var priceValue: String
-    
-    @Binding
-    var quantityValue: String
-    
     var body: some View {
         NavigationStack {
             VStack {

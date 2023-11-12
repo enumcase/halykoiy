@@ -49,7 +49,7 @@ struct InventorySection<Content: View>: View {
                 .font(.system(size: 14, weight: .medium, design: .default))
         }
         .button {
-            let view = EditItemScreen(viewModel: .init(environment: environment), nameValue: $nameValue, qrValue: $qrValue, priceValue: $priceValue, quantityValue: $quantityValue).environmentObject(router)
+            let view = EditItemScreen(viewModel: .init(environment: environment, nameValue: nameValue, qrValue: qrValue, priceValue: priceValue, quantityValue: quantityValue)).environmentObject(router)
             router.presentDialog(view)
         }
         .foregroundColor(.white)

@@ -10,7 +10,6 @@ struct InventoryScreen: View {
     
     @State private var isPresentingScanner = false
     @State private var isPresentingEditItem = false
-    @State private var scannedCode: String?
     
     var body: some View {
         NavigationStack {
@@ -42,15 +41,14 @@ struct InventoryScreen: View {
             .sheet(isPresented: $isPresentingScanner) {
                 CodeScannerView(codeTypes: [.qr, .codabar, .code128, .code39, .ean13, .ean8]) { response in
                     if case let .success(result) = response {
-                        scannedCode = "3232324"
-                        viewModel.qrValue = scannedCode ?? ""
+                        viewModel.qrValue = result.string
                         isPresentingScanner = false
                         isPresentingEditItem = true
                     }
                 }
             }
             .sheet(isPresented: $isPresentingEditItem) {
-                EditItemScreen(viewModel: .init(environment: viewModel.environment), nameValue: $viewModel.nameValue, qrValue: $viewModel.qrValue, priceValue: $viewModel.priceValue, quantityValue: $viewModel.quantityValue)
+                EditItemScreen(viewModel: .init(environment: viewModel.environment, nameValue: viewModel.nameValue, qrValue: viewModel.qrValue, priceValue: viewModel.priceValue, quantityValue: viewModel.quantityValue))
                     .environmentObject(router)
             }
             .onAppear {

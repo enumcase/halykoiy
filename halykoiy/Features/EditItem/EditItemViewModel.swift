@@ -14,13 +14,20 @@ final class EditItemViewModel: ObservableObject {
     }
     
     @Published
-    var state = State()
+    var state: State
     
     private var cancellables = Set<AnyCancellable>()
     private let environment: Env
     
-    init(environment: Env) {
+    init(
+        environment: Env,
+        nameValue: String,
+        qrValue: String,
+        priceValue: String,
+        quantityValue: String
+    ) {
         self.environment = environment
+        self.state = State(nameValue: nameValue, qrValue: qrValue, priceValue: priceValue, quantityValue: quantityValue)
     }
     
     func send(event: Event, completion: @escaping () -> Void) {
