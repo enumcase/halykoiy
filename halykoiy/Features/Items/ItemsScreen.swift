@@ -30,6 +30,9 @@ struct ItemsScreen: View {
                     backButton
                 }
             )
+            .onAppear {
+                viewModel.send(event: .loadItems)
+            }
         }
     }
     
