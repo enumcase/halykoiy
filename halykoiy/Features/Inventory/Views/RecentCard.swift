@@ -10,7 +10,7 @@ struct RecentCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack {
-                CachedAsyncImage(url: URL(string: item.imageUrl ?? "") ?? URL(string:  "https://universalele.websites.co.in/obaju-turquoise/img/product-placeholder.png")!, urlCache: .shared)
+                CachedAsyncImage(url: URL(string:  "https://universalele.websites.co.in/obaju-turquoise/img/product-placeholder.png"), urlCache: .shared)
                     .frame(width: 60, height: 60)
                     .cornerRadius(8)
                 
