@@ -17,6 +17,6 @@ final class InventoryRepository {
         let request = InventoryRequest.inventory
         let parameter = InventoryRequest.AddInventoryParameter(itemId: item.id, count: item.count ?? 0)
         let parameters = DictionaryHelper.makeDictionary(from: parameter)
-        return session.post(request: request)
+        return session.post(request: request, parameters: parameters)
     }
 }
