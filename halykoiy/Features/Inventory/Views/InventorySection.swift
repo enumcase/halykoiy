@@ -7,13 +7,17 @@ struct InventorySection<Content: View>: View {
     let title: String
     let environment: Env
     let shouldShowButton: Bool
+    @ObservedObject
+    var viewModel: InventoryViewModel
     @ViewBuilder let content: () -> Content
     
-    init(title: String, environment: Env, shouldShowButton: Bool = false, content: @escaping () -> Content) {
+    
+    init(title: String, environment: Env, shouldShowButton: Bool = false, viewModel: InventoryViewModel, content: @escaping () -> Content) {
         self.title = title
         self.environment = environment
         self.shouldShowButton = shouldShowButton
         self.content = content
+        self.viewModel = viewModel
     }
     
     @State var nameValue = ""
@@ -49,7 +53,9 @@ struct InventorySection<Content: View>: View {
                 .font(.system(size: 14, weight: .medium, design: .default))
         }
         .button {
-            let view = EditItemScreen(viewModel: .init(environment: environment, nameValue: nameValue, qrValue: qrValue, priceValue: priceValue, quantityValue: quantityValue)).environmentObject(router)
+            let view = EditItemScreen(viewModel: .init(environment: environment, nameValue: nameValue, qrValue: qrValue, priceValue: priceValue, quantityValue: quantityValue), completion: {
+                viewModel.send(event: .load)
+            }).environmentObject(router)
             router.presentDialog(view)
         }
         .foregroundColor(.white)

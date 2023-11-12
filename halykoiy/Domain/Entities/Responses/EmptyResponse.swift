@@ -1,5 +1,5 @@
 import Foundation
 
-public struct AddRemoveFavoriteResponse: Codable {
+public struct EmptyResponse: Codable {
     let message: String
 }

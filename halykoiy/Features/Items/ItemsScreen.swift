@@ -7,6 +7,9 @@ struct ItemsScreen: View {
     @ObservedObject
     var viewModel: ItemsViewModel
     
+    @ObservedObject
+    var inventoryViewModel: InventoryViewModel
+    
     let navTitle: String
     
     var body: some View {
@@ -15,7 +18,8 @@ struct ItemsScreen: View {
                 ForEach(viewModel.state.items) { item in
                     RecentCard(
                         item: item,
-                        environment: viewModel.environment
+                        environment: viewModel.environment,
+                        viewModel: inventoryViewModel
                     )
                 }
             }

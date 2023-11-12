@@ -54,7 +54,7 @@ final class InventoryViewModel: ObservableObject, ViewModel {
             .sink { [weak self] result in
                 switch result {
                 case .success(let response):
-                    self?.state.items = response
+                    self?.state.items = response.reversed()
                 case .failure(let error):
                     print("🐹 \(error)")
                 }

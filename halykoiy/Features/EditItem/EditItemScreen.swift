@@ -7,6 +7,8 @@ struct EditItemScreen: View {
     @ObservedObject
     var viewModel: EditItemViewModel
     
+    let completion: () -> Void
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -47,6 +49,7 @@ struct EditItemScreen: View {
         Button {
             viewModel.send(event: .addItem) {
                 router.dismiss()
+                completion()
             }
         } label: {
             Text("Добавить")

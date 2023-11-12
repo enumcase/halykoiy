@@ -14,7 +14,7 @@ struct InventoryScreen: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                InventorySection(title: "Статистика", environment: viewModel.environment) {
+                InventorySection(title: "Статистика", environment: viewModel.environment, viewModel: viewModel) {
                     DashboardSection(inventory: viewModel.state.inventory)
                 }
                 .padding(.horizontal, 16)
@@ -24,7 +24,7 @@ struct InventoryScreen: View {
                     .padding(.horizontal, 16)
                     .padding(.vertical, 8)
                 
-                InventorySection(title: "Недавние", environment: viewModel.environment, shouldShowButton: true) {
+                InventorySection(title: "Недавние", environment: viewModel.environment, shouldShowButton: true, viewModel: viewModel) {
                     RecentSection(viewModel: viewModel)
                 }
                 .padding(.horizontal, 16)
@@ -48,10 +48,15 @@ struct InventoryScreen: View {
                 }
             }
             .sheet(isPresented: $isPresentingEditItem) {
-                EditItemScreen(viewModel: .init(environment: viewModel.environment, nameValue: viewModel.nameValue, qrValue: viewModel.qrValue, priceValue: viewModel.priceValue, quantityValue: viewModel.quantityValue))
+                EditItemScreen(viewModel: .init(environment: viewModel.environment, nameValue: viewModel.nameValue, qrValue: viewModel.qrValue, priceValue: viewModel.priceValue, quantityValue: viewModel.quantityValue), completion: {
+                    viewModel.send(event: .load)
+                })
                     .environmentObject(router)
             }
             .onAppear {
+                viewModel.send(event: .load)
+            }
+            .refreshable {
                 viewModel.send(event: .load)
             }
         }

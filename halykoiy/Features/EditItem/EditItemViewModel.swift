@@ -7,6 +7,7 @@ final class EditItemViewModel: ObservableObject {
         var qrValue = ""
         var priceValue = ""
         var quantityValue = ""
+        var countValue = ""
     }
     
     enum Event {
@@ -33,7 +34,7 @@ final class EditItemViewModel: ObservableObject {
     func send(event: Event, completion: @escaping () -> Void) {
         switch event {
         case .addItem:
-            let item = Item(id: Int(state.qrValue) ?? 0, name: state.nameValue, price: Int(state.priceValue) ?? 0, imageUrl: "https://universalele.websites.co.in/obaju-turquoise/img/product-placeholder.png", count: 0)
+            let item = Item(id: Int(state.qrValue) ?? 0, name: state.nameValue, price: Int(state.priceValue) ?? 0, imageUrl: "https://universalele.websites.co.in/obaju-turquoise/img/product-placeholder.png", count: Int(state.countValue))
             addItem(item: item, completion: completion)
         }
     }
@@ -46,6 +47,18 @@ final class EditItemViewModel: ObservableObject {
                 case .success(let response):
                     print("🐰 \(response)")
                     completion()
+                case .failure(let error):
+                    print("🐹 \(error)")
+                }
+            }
+            .store(in: &cancellables)
+        
+        environment.inventoryRepository.addItem(item: item)
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] result in
+                switch result {
+                case .success(let response):
+                    print("🐰 \(response)")
                 case .failure(let error):
                     print("🐹 \(error)")
                 }

@@ -8,7 +8,7 @@ struct RecentSection: View {
         VStack(spacing: 0) {
             ForEach(viewModel.state.items) { item in
                 RecentCard(
-                    item: item, environment: viewModel.environment
+                    item: item, environment: viewModel.environment, viewModel: viewModel
                 )
                 .button {
                     

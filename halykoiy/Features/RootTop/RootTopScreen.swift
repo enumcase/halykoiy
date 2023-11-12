@@ -20,7 +20,7 @@ struct RootTopScreen: View {
                 ServiceScreen()
                 
             case .items(let navTitle):
-                ItemsScreen(viewModel: .init(environment: viewModel.environment), navTitle: navTitle)
+                ItemsScreen(viewModel: .init(environment: viewModel.environment), inventoryViewModel: .init(environment: viewModel.environment), navTitle: navTitle)
                 
             case .inventory:
                 InventoryScreen(

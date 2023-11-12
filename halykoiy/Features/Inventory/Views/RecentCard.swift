@@ -7,6 +7,9 @@ struct RecentCard: View {
     let item: Item
     let environment: Env
     
+    @ObservedObject
+    var viewModel: InventoryViewModel
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack {
@@ -59,7 +62,9 @@ struct RecentCard: View {
                 }
                 
                 Button {
-                    let view = EditItemScreen(viewModel: .init(environment: environment, nameValue: item.name, qrValue: String(item.id), priceValue: String(item.price), quantityValue: "0")).environmentObject(router)
+                    let view = EditItemScreen(viewModel: .init(environment: environment, nameValue: item.name, qrValue: String(item.id), priceValue: String(item.price), quantityValue: "0"), completion: {
+                        viewModel.send(event: .load)
+                    }).environmentObject(router)
                     router.presentDialog(view)
                 } label: {
                     Label("Редактировать", systemImage: "square.and.pencil")

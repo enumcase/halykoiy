@@ -1,6 +1,11 @@
 import Foundation
 
-enum GetInventoryRequest: JSONRequest {
+enum InventoryRequest: JSONRequest {
+    struct AddInventoryParameter: Codable {
+        let itemId: Int
+        let count: Int
+    }
+    
     case inventory
     
     var path: String {
